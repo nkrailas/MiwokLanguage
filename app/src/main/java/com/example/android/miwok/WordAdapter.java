@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -31,20 +32,19 @@ public class WordAdapter extends ArrayAdapter<Word>{
         // Get the Word object located at this position in the list
         Word currentWord = getItem(position);
 
-        // Find the TextView in the list_item.xml layout with the ID version_name
-        TextView miwokTextView = (TextView) listItemView.findViewById(R.id.miwok_text_view);
-        // Get the version name from the current AndroidFlavor object and
-        // set this text on the name TextView
+        // Find and get the ImageView in the list_item.xml layout
+        ImageView iconView = listItemView.findViewById(R.id.word_image);
+        iconView.setImageResource(currentWord.getImageResourceId());
+
+        // Find and get the Miwok TextView in the list_item.xml layout
+        TextView miwokTextView = listItemView.findViewById(R.id.miwok_text_view);
         miwokTextView.setText(currentWord.getMiwokTranslation());
 
-        // Find the TextView in the list_item.xml layout with the ID version_number
-        TextView defaultTextView = (TextView) listItemView.findViewById(R.id.default_text_view);
-        // Get the version number from the current AndroidFlavor object and
-        // set this text on the number TextView
+        // Find and get the Default TextView in the list_item.xml layout
+        TextView defaultTextView = listItemView.findViewById(R.id.default_text_view);
         defaultTextView.setText(currentWord.getDefaultTranslation());
 
-        // Return the whole list item layout (containing 2 TextViews)
-        // so that it can be shown in the ListView
+        // Return the whole list item layout so that it can be shown in the ListView
         return listItemView;
     }
 

@@ -17,14 +17,14 @@ public class ColorsActivity extends AppCompatActivity {
         ArrayList<Word> words = new ArrayList<Word>();
 
         // words.add("one");
-        words.add(new Word("red", "wetetti"));
-        words.add(new Word("green", "chokokki"));
-        words.add(new Word("brown", "takaaki"));
-        words.add(new Word("gray", "topoppi"));
-        words.add(new Word("black", "kululli"));
-        words.add(new Word("white", "kelelli"));
-        words.add(new Word("dusty yellow", "topiisə"));
-        words.add(new Word("mustard yellow", "chiwiitə"));
+        words.add(new Word(R.drawable.color_red, "red", "wetetti"));
+        words.add(new Word(R.drawable.color_green, "green", "chokokki"));
+        words.add(new Word(R.drawable.color_brown, "brown", "takaaki"));
+        words.add(new Word(R.drawable.color_gray, "gray", "topoppi"));
+        words.add(new Word(R.drawable.color_black, "black", "kululli"));
+        words.add(new Word(R.drawable.color_white, "white", "kelelli"));
+        words.add(new Word(R.drawable.color_dusty_yellow, "dusty yellow", "topiisə"));
+        words.add(new Word(R.drawable.color_mustard_yellow, "mustard yellow", "chiwiitə"));
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
         // adapter knows how to create layouts for each item in the list, using the

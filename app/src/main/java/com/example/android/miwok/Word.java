@@ -7,32 +7,54 @@ package com.example.android.miwok;
 
 public class Word {
 
+    /**
+     * Image for the word
+     */
+    private int ImageResourceId;
+
     /** Default translation for the word */
-    private String mDefaultTranslation;
+    private String DefaultTranslation;
 
     /** Miwok translation for the word */
-    private String mMiwokTranslation;
+    private String MiwokTranslation;
 
     /**
      * Create a new Word object.
      *
      * @param defaultTranslation    Word in familiar language (e.g. English)
      * @param miwokTranslation      Word in Miwok language
+     *
      */
 
-
     public Word(String defaultTranslation, String miwokTranslation) {
-        mDefaultTranslation = defaultTranslation;
-        mMiwokTranslation = miwokTranslation;
+        DefaultTranslation = defaultTranslation;
+        MiwokTranslation = miwokTranslation;
     }
+
+    /**
+     * Create a new Word object.
+     *
+     * @param imageResourceId    Drawable Resource Id for image associated with the word
+     * @param defaultTranslation Word in familiar language (e.g. English)
+     * @param miwokTranslation   Word in Miwok language
+     */
+    public Word(int imageResourceId, String defaultTranslation, String miwokTranslation) {
+        ImageResourceId = imageResourceId;
+        DefaultTranslation = defaultTranslation;
+        MiwokTranslation = miwokTranslation;
+    }
+
+    /**
+     * Get the images associated with using the drawable Resource Id
+     */
+    public int getImageResourceId() {
+        return ImageResourceId; }
 
     /** Get the Miwok translation of the word */
-    public String getMiwokTranslation(){
-        return mMiwokTranslation;
-    }
+    public String getMiwokTranslation() {
+        return MiwokTranslation; }
 
     /** Get the default translation of the word */
-    public String getDefaultTranslation(){
-        return mDefaultTranslation;
-    }
+    public String getDefaultTranslation() {
+        return DefaultTranslation; }
 }
