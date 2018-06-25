@@ -7,15 +7,14 @@ package com.example.android.miwok;
 
 public class Word {
 
-    /**
-     * Image for the word
-     */
-    private int ImageResourceId;
-
-    /** Default translation for the word */
+    // Constant value that represents no image was provided for this word
+    private static final int NO_IMAGE_PROVIDED = 0;
+    // Image resource ID for the word
+    private int ImageResourceId = NO_IMAGE_PROVIDED;
+    // Default translation for the word
     private String DefaultTranslation;
 
-    /** Miwok translation for the word */
+    // Miwok translation for the word
     private String MiwokTranslation;
 
     /**
@@ -44,17 +43,21 @@ public class Word {
         MiwokTranslation = miwokTranslation;
     }
 
-    /**
-     * Get the images associated with using the drawable Resource Id
-     */
+    // Get the images associated with using the drawable Resource Id
     public int getImageResourceId() {
-        return ImageResourceId; }
+        return ImageResourceId;
+    }
 
-    /** Get the Miwok translation of the word */
+    // Returns whether or not there is an image for this word
+    public boolean hasImage() {
+        return ImageResourceId != NO_IMAGE_PROVIDED;
+    }
+
+    // Get the Miwok translation of the word
     public String getMiwokTranslation() {
         return MiwokTranslation; }
 
-    /** Get the default translation of the word */
+    // Get the default translation of the word
     public String getDefaultTranslation() {
         return DefaultTranslation; }
 }
