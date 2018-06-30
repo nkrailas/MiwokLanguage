@@ -7,10 +7,15 @@ package com.example.android.miwok;
 
 public class Word {
 
+    // Audio resource ID for the word
+    private int AudioResourceId;
+
     // Constant value that represents no image was provided for this word
     private static final int NO_IMAGE_PROVIDED = 0;
+
     // Image resource ID for the word
     private int ImageResourceId = NO_IMAGE_PROVIDED;
+
     // Default translation for the word
     private String DefaultTranslation;
 
@@ -22,12 +27,14 @@ public class Word {
      *
      * @param defaultTranslation    Word in familiar language (e.g. English)
      * @param miwokTranslation      Word in Miwok language
+     * @param audioResourceId       Audio resource Id for audio file associated with the Miwok word
      *
      */
 
-    public Word(String defaultTranslation, String miwokTranslation) {
+    public Word(String defaultTranslation, String miwokTranslation, int audioResourceId) {
         DefaultTranslation = defaultTranslation;
         MiwokTranslation = miwokTranslation;
+        AudioResourceId = audioResourceId;
     }
 
     /**
@@ -36,14 +43,21 @@ public class Word {
      * @param imageResourceId    Drawable Resource Id for image associated with the word
      * @param defaultTranslation Word in familiar language (e.g. English)
      * @param miwokTranslation   Word in Miwok language
+     * @param audioResourceId    Audio resource Id for audio file associated with the Miwok word
      */
-    public Word(int imageResourceId, String defaultTranslation, String miwokTranslation) {
+    public Word(int imageResourceId, String defaultTranslation, String miwokTranslation, int audioResourceId) {
         ImageResourceId = imageResourceId;
         DefaultTranslation = defaultTranslation;
         MiwokTranslation = miwokTranslation;
+        AudioResourceId = audioResourceId;
     }
 
-    // Get the images associated with using the drawable Resource Id
+    // Get the audio file associated with the Miwok word
+    public int getAudioResourceId() {
+        return AudioResourceId;
+    }
+
+    // Get the image associated with using the drawable Resource Id
     public int getImageResourceId() {
         return ImageResourceId;
     }
