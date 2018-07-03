@@ -16,6 +16,9 @@
 
     <!-- Size of each list item -->
     <dimen name="list_item_height">88dp</dimen>
+    <dimen name="ic_play_width">24dp</dimen>
+    <dimen name="ic_play_height">24dp</dimen>
+    <dimen name="main_textview_height">44dp</dimen>
     <!-- Default screen margins, per the Android Design guidelines. -->
 
 </resources>
