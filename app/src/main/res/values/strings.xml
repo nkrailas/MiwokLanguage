@@ -26,13 +26,13 @@
     <string name="category_numbers">Numbers</string>
 
     <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
-    <string name="category_family">Family Members</string>
+    <string name="category_family">Family</string>
     <string name="list_item_icon">Image for word or phrase</string>
     <string name="white_play_arrow_button">white play arrow button</string>
 
     <string name="numbers_title">Numbers</string>
-    <string name="family_title">Numbers</string>
-    <string name="colors_title">Numbers</string>
-    <string name="phrases_title">Numbers</string>
+    <string name="family_title">Family</string>
+    <string name="colors_title">Colors</string>
+    <string name="phrases_title">Phrases</string>
 
 </resources>

@@ -10,13 +10,22 @@ import android.support.v4.app.FragmentPagerAdapter;
  */
 public class FixedTabsPagerAdapter extends FragmentPagerAdapter {
 
+    // Context of the app
     private Context context;
 
-    FixedTabsPagerAdapter(FragmentManager fragmentManager, Context context) {
+    /**
+     * Create a new Adapter object
+     *
+     * @param context         Context of the app
+     * @param fragmentManager Keep each fragment's state in the adapter across swipes
+     */
+
+    public FixedTabsPagerAdapter(Context context, FragmentManager fragmentManager) {
         super(fragmentManager);
         this.context = context;
     }
 
+    // Return the fragment that should be displayed for the given page number
     @Override
     public Fragment getItem(int position) {
         if (position == 0) {
@@ -33,18 +42,19 @@ public class FixedTabsPagerAdapter extends FragmentPagerAdapter {
     @Override
     public CharSequence getPageTitle(int position) {
         if (position == 0) {
-            return context.getString(R.string.numbers_title);
+            return context.getString(R.string.category_numbers);
         } else if (position == 1) {
-            return context.getString(R.string.family_title);
+            return context.getString(R.string.category_family);
         } else if (position == 2) {
-            return context.getString(R.string.colors_title);
+            return context.getString(R.string.category_colors);
         } else if (position == 3) {
-            return context.getString(R.string.phrases_title);
+            return context.getString(R.string.category_phrases);
         }
 
         return null;
     }
 
+    // Return the total number of pages
     @Override
     public int getCount() {
         return 4;
