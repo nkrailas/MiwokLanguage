@@ -25,10 +25,9 @@ public class Word {
     /**
      * Create a new Word object.
      *
-     * @param defaultTranslation    Word in familiar language (e.g. English)
-     * @param miwokTranslation      Word in Miwok language
-     * @param audioResourceId       Audio resource Id for audio file associated with the Miwok word
-     *
+     * @param defaultTranslation Word in familiar language (e.g. English)
+     * @param miwokTranslation   Word in Miwok language
+     * @param audioResourceId    Audio resource Id for audio file associated with the Miwok word
      */
 
     public Word(String defaultTranslation, String miwokTranslation, int audioResourceId) {
@@ -69,9 +68,11 @@ public class Word {
 
     // Get the Miwok translation of the word
     public String getMiwokTranslation() {
-        return MiwokTranslation; }
+        return MiwokTranslation;
+    }
 
     // Get the default translation of the word
     public String getDefaultTranslation() {
-        return DefaultTranslation; }
+        return DefaultTranslation;
+    }
 }
