@@ -30,5 +30,9 @@
     <string name="list_item_icon">Image for word or phrase</string>
     <string name="white_play_arrow_button">white play arrow button</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="numbers_title">Numbers</string>
+    <string name="family_title">Numbers</string>
+    <string name="colors_title">Numbers</string>
+    <string name="phrases_title">Numbers</string>
+
 </resources>
